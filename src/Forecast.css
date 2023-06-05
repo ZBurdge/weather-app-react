@@ -1,0 +1,15 @@
+.forecast-heading {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+}
+.forecast {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  margin-top: 15px;
+  padding-top: 0 auto;
+}
+.sat {
+  border: none;
+}
