@@ -1,9 +1,0 @@
-.Location {
-  background: #eac8af;
-  border-radius: 15px;
-  transition: all 200ms ease-in;
-}
-.Location:hover {
-  background: #5f939a;
-  color: #eac8af;
-}

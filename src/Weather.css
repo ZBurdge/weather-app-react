@@ -1,3 +1,32 @@
+.searchBox {
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.search-btn {
+  border-radius: 15px;
+}
+
+.Location {
+  background: #eac8af;
+  border-radius: 15px;
+  transition: all 200ms ease-in;
+}
+.Location:hover {
+  background: #5f939a;
+  color: #eac8af;
+}
+
+.City {
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
 .currentWeather {
   color: #191a19;
   font-family: "Oswald", sans-serif;
