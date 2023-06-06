@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 
@@ -9,7 +10,7 @@ export default function Weather() {
     console.log(response.data);
     setweatherData({
       ready: true,
-      date: "Thursday 13:05",
+      date: new Date(response.data.time * 1000),
       icon: response.data.condition.icon_url,
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
@@ -45,7 +46,9 @@ export default function Weather() {
         <div className="row">
           <div className="col-6">
             <h2 className="currentWeather">
-              <section id="date-time">{weatherData.date}</section>
+              <section id="date-time">
+                <FormattedDate date={weatherData.date} />
+              </section>
               <div className="iconTemp">
                 <img
                   src={weatherData.icon}
@@ -81,7 +84,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    let city = "da nang";
+    let city = "Avondale";
     const apiKey = "354625fc8tco3a0bc76af830b102d699";
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
