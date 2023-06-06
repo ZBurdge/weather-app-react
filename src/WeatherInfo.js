@@ -11,7 +11,7 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-6">
           <h2 className="currentWeather">
-            <section id="date-time">
+            <section>
               <FormattedDate date={props.data.date} />
             </section>
             <div className="iconTemp">

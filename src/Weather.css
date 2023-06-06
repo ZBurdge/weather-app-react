@@ -32,6 +32,11 @@
   font-family: "Oswald", sans-serif;
   font-size: 40px;
 }
+
+.currentWeather section {
+  font-weight: bold;
+}
+
 .iconTemp {
   position: relative;
   right: 15px;
@@ -58,7 +63,7 @@
   text-align: right;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
-  
+
   bottom: 95px;
 }
 
