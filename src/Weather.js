@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
+
 import axios from "axios";
 import "./Weather.css";
 
@@ -40,47 +41,7 @@ export default function Weather() {
         <button id="currentLocation-btn" className="Location">
           Current Location
         </button>
-        <h1 id="city" className="City">
-          {weatherData.city}
-        </h1>
-        <div className="row">
-          <div className="col-6">
-            <h2 className="currentWeather">
-              <section id="date-time">
-                <FormattedDate date={weatherData.date} />
-              </section>
-              <div className="iconTemp">
-                <img
-                  src={weatherData.icon}
-                  alt={weatherData.description}
-                  id="icon"
-                />
-                <strong id="current-temp">
-                  {Math.round(weatherData.temperature)}
-                </strong>
-                <span className="units"> °F </span>
-              </div>
-            </h2>
-          </div>
-          <div className="col-6">
-            <h3 className="weatherInfo">
-              <ul>
-                <li>
-                  <span className="description" id="description">
-                    {weatherData.description}
-                  </span>
-                </li>
-                <li>
-                  Humidity:{" "}
-                  <span id="humidity">{Math.round(weatherData.humidity)}</span>%
-                </li>
-                <li>
-                  Wind: <span id="wind">{Math.round(weatherData.wind)}</span>mph
-                </li>
-              </ul>
-            </h3>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
