@@ -1,12 +1,17 @@
+:root {
+  --Primary-color: #ffd400;
+  --Seconday-color: #d90368;
+}
+
 body {
-  background: #5f939a;
+  background: var(--Primary-color);
 }
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
 .weather-app {
-  background: #d8ac9c;
+  background: var(--Seconday-color);
   padding: 10px 30px;
   border: 2px solid black;
   border-radius: 8px;

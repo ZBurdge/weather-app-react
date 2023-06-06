@@ -9,13 +9,13 @@
 }
 
 .Location {
-  background: #eac8af;
+  background: var(--Primary-color);
   border-radius: 15px;
   transition: all 200ms ease-in;
 }
 .Location:hover {
-  background: #5f939a;
-  color: #eac8af;
+  background: #541388;
+  color: var(--Seconday-color);
 }
 
 .City {
@@ -28,7 +28,6 @@
 }
 
 .currentWeather {
-  color: #191a19;
   font-family: "Oswald", sans-serif;
   font-size: 40px;
 }
