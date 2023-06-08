@@ -1,6 +1,5 @@
 import "./App.css";
 import Weather from "./Weather";
-import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 export default function App() {
@@ -10,7 +9,6 @@ export default function App() {
         <div className="weather-app-wrapper">
           <div className="weather-app">
             <Weather defaultCity="Avondale" />
-            <Forecast />
           </div>
           <Footer />
         </div>
