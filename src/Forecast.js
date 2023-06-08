@@ -15,12 +15,18 @@ export default function Forecast(props) {
     console.log(forecastData);
     return (
       <div className="Forecast">
-        <h3 className="forecast-heading">6 Day Forecast</h3>
+        <h3 className="forecast-heading">5 Day Forecast</h3>
         <hr />
         <div className="row">
-          <div className="col">
-            <ForecastDay data={forecastData[0]} />
-          </div>
+          {forecastData.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key="index">
+                  <ForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
